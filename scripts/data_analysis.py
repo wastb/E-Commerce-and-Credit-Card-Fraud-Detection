@@ -45,8 +45,8 @@ def bivariate_categorical(df):
         plt.figure(figsize=(10, 5))
         sns.countplot(x=df['class'], hue=col, data=df)
         plt.title(f'Count plot of {col} vs class', fontweight='bold', fontsize=15)
-        plt.xlabel(f'{col}', fontweight='bold', fontsize=12)
-        plt.ylabel('count', fontweight='bold', fontsize=12)
+        plt.xlabel('Class', fontweight='bold', fontsize=12)
+        plt.ylabel('Count', fontweight='bold', fontsize=12)
         plt.legend(prop={'weight': 'bold', 'size': 12}, labelcolor='purple')
         plt.show()
 def correlation_matrix(df):
