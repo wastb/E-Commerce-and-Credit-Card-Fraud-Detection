@@ -22,8 +22,8 @@ def univariate_categorical(df):
         plt.figure(figsize=(10, 5))
         sns.countplot(df[col])
         plt.title(f'Count plot of {col}', fontweight='bold')
-        plt.xlabel(f'{col}', fontweight='bold', fontsize=12)
-        plt.ylabel('count', fontweight='bold', fontsize=12)
+        plt.xlabel(f'count', fontweight='bold', fontsize=12)
+        plt.ylabel(f'{col}', fontweight='bold', fontsize=12)
         plt.show()
 
 def bivariate_numerical(df):
