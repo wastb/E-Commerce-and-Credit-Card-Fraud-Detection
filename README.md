@@ -44,7 +44,7 @@ An interactive dashboard built with Dash to visualize fraud detection insights s
 1. clone the repository
 
 ```bash
-https://github.com/wastb/KIAM-Week8
+git clone https://github.com/wastb/E-Commerce-and-Credit-Card-Fraud-Detection
 ```
 
 2. install the required libraries
@@ -54,3 +54,8 @@ pip install -r requirements.txt
 ```
 
 3. Start Exploring
+
+## Contact Information
+
+#### - Name: ***Wasihun Tesfaye***
+#### - E-Mail: wasihunpersonal@gmail.com
