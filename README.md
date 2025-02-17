@@ -57,5 +57,5 @@ pip install -r requirements.txt
 
 ## Contact Information
 
-#### - Name: ***Wasihun Tesfaye***
-#### - E-Mail: wasihunpersonal@gmail.com
+#### Name: ***Wasihun Tesfaye***
+#### E-Mail: wasihunpersonal@gmail.com
