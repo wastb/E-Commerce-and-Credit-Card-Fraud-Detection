@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .result-box {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .form-data {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .form-data p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+        .prediction {
+            text-align: center;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+        }
+        .fraud {
+            background-color: #e74c3c;
+        }
+        .legitimate {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Transaction Prediction Result</h2>
+        
+        <!-- Prediction Result Box -->
+        <div class="result-box">
+            <h3>Prediction:</h3>
+            <div class="prediction {% if prediction == 1 %}fraud{% else %}legitimate{% endif %}">
+                {% if prediction == 1 %}
+                    Fraud Detected
+                {% else %}
+                    Legitimate Transaction
+                {% endif %}
+            </div>
+        </div>
+        
+        <!-- Displaying Form Data -->
+        <div class="form-data">
+            <h3>Submitted Information:</h3>
+            <p><strong>Signup Date:</strong> {{ form_data.signup_time }}</p>
+            <p><strong>Purchase Date:</strong> {{ form_data.purchase_time }}</p>
+            <p><strong>Purchase Value:</strong> ${{ form_data.purchase_value }}</p>
+            <p><strong>Source:</strong> {{ form_data.source }}</p>
+            <p><strong>Browser:</strong> {{ form_data.browser }}</p>
+            <p><strong>Sex:</strong> {{ form_data.sex }}</p>
+            <p><strong>Age:</strong> {{ form_data.age }}</p>
+            <p><strong>IP Address:</strong> {{ form_data.ip_address }}</p>
+            <p><strong>Frequency:</strong> {{ form_data.frequency }}</p>
+            <p><strong>Velocity:</strong> {{ form_data.velocity }}</p>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="/" style="color: #3498db; text-decoration: none; font-weight: bold;">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
