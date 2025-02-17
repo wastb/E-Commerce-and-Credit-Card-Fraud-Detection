@@ -2,3 +2,5 @@
 /data
 /mlruns
 /mlartifacts
+/dash/ip.csv
+/flask-app/ip_add.csv
